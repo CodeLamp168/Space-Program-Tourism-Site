@@ -421,11 +421,14 @@ header {
 .destination-page {
     color:white;
     position:relative;
+
     .heading-4 {
         @extend %heading-4;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-left:2em;
+
+
 
 
     }
@@ -629,6 +632,9 @@ header {
             }
 
             .crew-selectors {
+                @media(min-width:700px){
+                    margin-top:2em;
+                }
                 display:flex;
                 gap:2em;
 
@@ -760,5 +766,132 @@ header {
               }
             }
           }
+    }
+}
+
+//tech-page
+
+.technology-page {
+    margin:0;
+
+    @media(max-width:1100px) {
+        .heading-4 {
+            text-align: center;
+            margin-top:1em;
+            margin-left:0;
+        }
+    }
+
+    @media(max-width:700px) {
+        .tech-page-content{
+            max-height:100vh;
+            justify-content:center;
+        }
+    }
+}
+.tech-page-content {
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    color:white;
+    height:90vh;
+    @media(max-width:1100px){
+        flex-direction: column-reverse;
+        justify-content: center;
+        height:auto;
+        text-align: center;
+    }
+
+
+    .tech-info {
+        display:flex;
+        align-items: center;
+        min-width:320px;
+        max-width:750px;
+        min-height:320px;
+        height:auto;
+        gap:3em;
+        padding:10px;
+
+        .tech-sec-lists {
+            display:flex;
+            flex-direction: column;
+            gap:2em;
+
+            
+
+            .tech-btn {
+                @extend %heading-4;
+                width:80px;
+                height:80px;
+                border-radius:80px;
+                border:0px;
+                cursor:pointer;
+                font-weight:800;
+
+                transition:background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+                &:not(.tech-select){
+                    border:2px solid white;
+                    background-color:rgba(0, 0, 0, 0.082);
+                    color:white;
+
+                    &:hover {
+                        background-color:rgb(143, 143, 143);
+                        border:2px solid rgb(143, 143, 143);
+                    }
+                }
+
+                &.tech-select {
+                    background-color:white;
+                    color:black;
+                }
+                
+            }
+
+        }
+
+        .tech-text {
+            .heading-4 {
+                margin-left:0;
+                font-size:18px;
+                color:#a1a1a1;
+            }
+
+            .heading-3 {
+                @extend %heading-3;
+                text-transform: uppercase;
+                margin:0;
+            }
+
+            .heading-5 {
+                @extend %heading-5;
+                font-size:19px;
+            }
+        }
+
+        @media(max-width:1100px){
+            flex-direction: column;
+            .tech-sec-lists {
+                flex-direction:row;
+            }
+        }
+    }
+    .tech-img {
+        display:flex;
+        align-items: center;
+        background-repeat:no-repeat;
+        margin:0;
+
+        @media(max-width:1100px){
+            width:105%;
+
+            .landscape {
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                object-fit:contain;
+            }
+        }
     }
 }

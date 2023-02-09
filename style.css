@@ -10,15 +10,15 @@ html {
   margin: 0;
 }
 
-.destination-page .destination-information .subject.heading-2, .crew-page .crew-page-content .crew-info-area .crew-name.heading-3, .landing-page .heading-4, .technology-page .heading-4, .crew-page .heading-4, .destination-page .heading-4, .destination-page .destination-information .destination-stats .distance-set .subheading-1, .destination-page .destination-information .destination-stats .time-set .subheading-1 {
+.destination-page .destination-information .subject.heading-2, .tech-page-content .tech-info .tech-text .heading-3, .crew-page .crew-page-content .crew-info-area .crew-name.heading-3, .tech-page-content .tech-info .tech-sec-lists .tech-btn, .landing-page .heading-4, .technology-page .heading-4, .crew-page .heading-4, .destination-page .heading-4, .destination-page .destination-information .destination-stats .distance-set .subheading-1, .destination-page .destination-information .destination-stats .time-set .subheading-1 {
   font-family: "Bellefair";
 }
 
-.crew-page .crew-page-content .crew-info-area .crew-details.heading-5, .destination-page .destination-information .subject-description.heading-5, .landing-page .landing-page-content .landing-page-text-content p, .landing-page .landing-page-content .landing-page-text-content h2, .destination-page .destination-information .destination-stats .distance-set .subheading-2, .destination-page .destination-information .destination-stats .time-set .subheading-2, .destination-page .destination-information .destination-nav-text, header nav ul li a {
+.tech-page-content .tech-info .tech-text .heading-5, .crew-page .crew-page-content .crew-info-area .crew-details.heading-5, .destination-page .destination-information .subject-description.heading-5, .landing-page .landing-page-content .landing-page-text-content p, .landing-page .landing-page-content .landing-page-text-content h2, .destination-page .destination-information .destination-stats .distance-set .subheading-2, .destination-page .destination-information .destination-stats .time-set .subheading-2, .destination-page .destination-information .destination-nav-text, header nav ul li a {
   font-family: "Barlow Condensed";
 }
 
-.destination-page .destination-information .subject.heading-2, .crew-page .crew-page-content .crew-info-area .crew-name.heading-3, .landing-page .heading-4, .technology-page .heading-4, .crew-page .heading-4, .destination-page .heading-4, .destination-page .destination-information .destination-stats .distance-set .subheading-1, .destination-page .destination-information .destination-stats .time-set .subheading-1, .destination-page .destination-information .destination-stats .distance-set .subheading-2, .destination-page .destination-information .destination-stats .time-set .subheading-2, .destination-page .destination-information .destination-nav-text, header nav ul li a {
+.destination-page .destination-information .subject.heading-2, .tech-page-content .tech-info .tech-text .heading-3, .crew-page .crew-page-content .crew-info-area .crew-name.heading-3, .tech-page-content .tech-info .tech-sec-lists .tech-btn, .landing-page .heading-4, .technology-page .heading-4, .crew-page .heading-4, .destination-page .heading-4, .destination-page .destination-information .destination-stats .distance-set .subheading-1, .destination-page .destination-information .destination-stats .time-set .subheading-1, .destination-page .destination-information .destination-stats .distance-set .subheading-2, .destination-page .destination-information .destination-stats .time-set .subheading-2, .destination-page .destination-information .destination-nav-text, header nav ul li a {
   color: #FFFFFF;
 }
 
@@ -26,15 +26,15 @@ html {
   font-size: 100px;
 }
 
-.crew-page .crew-page-content .crew-info-area .crew-name.heading-3 {
+.tech-page-content .tech-info .tech-text .heading-3, .crew-page .crew-page-content .crew-info-area .crew-name.heading-3 {
   font-size: 56px;
 }
 
-.landing-page .heading-4, .technology-page .heading-4, .crew-page .heading-4, .destination-page .heading-4 {
+.tech-page-content .tech-info .tech-sec-lists .tech-btn, .landing-page .heading-4, .technology-page .heading-4, .crew-page .heading-4, .destination-page .heading-4 {
   font-size: 32px;
 }
 
-.crew-page .crew-page-content .crew-info-area .crew-details.heading-5, .destination-page .destination-information .subject-description.heading-5, .landing-page .landing-page-content .landing-page-text-content p, .landing-page .landing-page-content .landing-page-text-content h2 {
+.tech-page-content .tech-info .tech-text .heading-5, .crew-page .crew-page-content .crew-info-area .crew-details.heading-5, .destination-page .destination-information .subject-description.heading-5, .landing-page .landing-page-content .landing-page-text-content p, .landing-page .landing-page-content .landing-page-text-content h2 {
   font-size: 28px;
   letter-spacing: 4.75px;
   color: #D0D6F9;
@@ -510,6 +510,11 @@ header nav ul li a nobr {
   display: flex;
   gap: 2em;
 }
+@media (min-width: 700px) {
+  .crew-page .crew-page-content .crew-info-area .crew-selectors {
+    margin-top: 2em;
+  }
+}
 .crew-page .crew-page-content .crew-info-area .crew-selectors .selector {
   width: 20px;
   height: 20px;
@@ -605,5 +610,113 @@ header nav ul li a nobr {
   .crew-page .crew-page-content .crew-image img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+.technology-page {
+  margin: 0;
+}
+@media (max-width: 1100px) {
+  .technology-page .heading-4 {
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .technology-page .tech-page-content {
+    max-height: 100vh;
+    justify-content: center;
+  }
+}
+
+.tech-page-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  height: 90vh;
+}
+@media (max-width: 1100px) {
+  .tech-page-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+  }
+}
+.tech-page-content .tech-info {
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  max-width: 750px;
+  min-height: 320px;
+  height: auto;
+  gap: 3em;
+  padding: 10px;
+}
+.tech-page-content .tech-info .tech-sec-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.tech-page-content .tech-info .tech-sec-lists .tech-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  border: 0px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.tech-page-content .tech-info .tech-sec-lists .tech-btn:not(.tech-select) {
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.082);
+  color: white;
+}
+.tech-page-content .tech-info .tech-sec-lists .tech-btn:not(.tech-select):hover {
+  background-color: rgb(143, 143, 143);
+  border: 2px solid rgb(143, 143, 143);
+}
+.tech-page-content .tech-info .tech-sec-lists .tech-btn.tech-select {
+  background-color: white;
+  color: black;
+}
+.tech-page-content .tech-info .tech-text .heading-4 {
+  margin-left: 0;
+  font-size: 18px;
+  color: #a1a1a1;
+}
+.tech-page-content .tech-info .tech-text .heading-3 {
+  text-transform: uppercase;
+  margin: 0;
+}
+.tech-page-content .tech-info .tech-text .heading-5 {
+  font-size: 19px;
+}
+@media (max-width: 1100px) {
+  .tech-page-content .tech-info {
+    flex-direction: column;
+  }
+  .tech-page-content .tech-info .tech-sec-lists {
+    flex-direction: row;
+  }
+}
+.tech-page-content .tech-img {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+@media (max-width: 1100px) {
+  .tech-page-content .tech-img {
+    width: 105%;
+  }
+  .tech-page-content .tech-img .landscape {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }/*# sourceMappingURL=style.css.map */
